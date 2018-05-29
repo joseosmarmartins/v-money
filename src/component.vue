@@ -2,7 +2,7 @@
   <input type="tel"
          :value="formattedValue"
          @change="change"
-         v-money="{precision, decimal, thousands, prefix, suffix}"
+         v-money="{precision, decimal, thousands, prefix, suffix, placeholder}"
          class="v-money" />
 </template>
 
@@ -42,6 +42,10 @@ export default {
     suffix: {
       type: String,
       default: () => defaults.suffix
+    },
+    placeholder: {
+      type: Boolean,
+      default: () => defaults.placeholder
     }
   },
 

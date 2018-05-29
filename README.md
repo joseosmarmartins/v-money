@@ -98,7 +98,9 @@ Must use `vmodel.lazy` to bind works properly.
 | thousands | false    | String  | ","     | Thousands separator                                     |
 | prefix    | false    | String  | ""      | Currency symbol followed by a Space, like "R$ "         |
 | suffix    | false    | String  | ""      | Percentage for example: " %"                            |
-| masked    | false    | Boolean | false   | If the component output should include the mask or not  |
+| masked    | false    | Boolean | false   | If the component output 
+should include the mask or not  |
+| placeholder    | false    | Boolean | false   | If the component start with a placeholder
 
 ### References
 
