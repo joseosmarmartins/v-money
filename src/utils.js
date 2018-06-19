@@ -1,6 +1,7 @@
 import defaults from './options'
 
 function format (input, opt = defaults) {
+  if (opt.placeholder && input == '') return ''
   if (typeof input === 'number') {
     input = input.toFixed(fixed(opt.precision))
   }
