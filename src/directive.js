@@ -16,6 +16,15 @@ export default function (el, binding) {
     }
   }
 
+  el.onkeydown = function (e) {
+    var backspacePressed = e.which == 8 || e.which == 46
+    var atEndPosition = (el.value.length - el.selectionEnd) === 0
+    if (opt.placeholder && backspacePressed && atEndPosition && (unformat(el.value, 0) === 0)) {
+      el.value = ''
+      el.dispatchEvent(event('change')) // v-model.lazy
+    }
+  }
+
   el.oninput = function () {
     var positionFromEnd = el.value.length - el.selectionEnd
     el.value = format(el.value, opt)
