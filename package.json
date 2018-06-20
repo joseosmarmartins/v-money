@@ -7,8 +7,8 @@
     "size": "size-limit",
     "upgrade:check": "ncu",
     "upgrade:apply": "ncu -a",
-    "dev": "poi ./src/docs/docs.vue --config ./src/docs/build.config.js --host 0.0.0.0",
-    "build": "poi build ./src/index.js --config ./build.config.js --dist ./dist/ --prod --lib",
+    "dev": "vue build ./src/docs/docs.vue --config ./src/docs/build.config.js --host 0.0.0.0",
+    "build": "vue build ./src/index.js --config ./build.config.js --dist ./dist/ --prod --lib",
     "docs:build": "vue build ./src/docs/docs.vue --config ./src/docs/build.config.js --dist ./docs/ --prod",
     "docs:serve": "open http://localhost:5000/docs/ && serve ./",
     "compile": "npm run build -- --disable-compress",
@@ -39,6 +39,7 @@
     "jest": "^21.2.1",
     "npm-check-updates": "^2.13.0",
     "size-limit": "^0.11.6",
+    "vue-cli": "2.8.2",
     "vuetify": "^0.16.7"
   },
   "dependencies": {
